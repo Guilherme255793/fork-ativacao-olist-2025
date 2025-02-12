@@ -8,6 +8,8 @@
 -- COMMAND ----------
 
 -- DBTITLE 1,data check - pagamento
+  
+-- alteracao de teste
   SELECT
       SUM(CASE WHEN pg.vlPagamento IS NULL THEN 1 ELSE 0 END) / COUNT(*) * 100 AS pct_vlPagamento_null,
       SUM(CASE WHEN pg.descTipoPagamento IS NULL THEN 1 ELSE 0 END) / COUNT(*) * 100 AS pct_descTipoPagamento_null,
